@@ -1,0 +1,37 @@
+# 日结单打印模板
+maxrow: 30
+rowheight: 22
+colwidth: 200
+titlefontsize: 18
+contentfontsize: 11
+top: 30
+left: 40
+title: 门诊费用日结单
+fields:
+  - settleDate:
+     title: 日期
+     prop: settleDate
+  - deptName:
+     title: 科室
+     prop: deptName
+  - operatorName:
+     title: 操作员
+     prop: operatorName
+  - regTotal:
+     title: 挂号收费
+     prop: regTotal
+  - drugTotal:
+     title: 药品收费
+     prop: drugTotal
+  - examTotal:
+     title: 检查收费
+     prop: examTotal
+  - labTotal:
+     title: 检验收费
+     prop: labTotal
+  - treatmentTotal:
+     title: 处置收费
+     prop: treatmentTotal
+  - totalAmount:
+     title: 合计金额
+     prop: totalAmount

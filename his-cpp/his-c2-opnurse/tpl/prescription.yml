@@ -1,0 +1,35 @@
+# 处方打印模板
+maxrow: 20
+rowheight: 22
+colwidth: 180
+titlefontsize: 18
+contentfontsize: 11
+top: 30
+left: 40
+title: 门诊处方
+fields:
+  - patientName:
+     title: 患者姓名
+     prop: patientName
+  - drugName:
+     title: 药品名称
+     prop: drugName
+     colwidth: 250
+  - specification:
+     title: 规格
+     prop: specification
+  - quantity:
+     title: 数量
+     prop: quantity
+  - usage:
+     title: 用法
+     prop: usage
+  - frequency:
+     title: 频次
+     prop: frequency
+  - doctorName:
+     title: 医生
+     prop: doctorName
+  - remark:
+     title: 备注
+     prop: remark

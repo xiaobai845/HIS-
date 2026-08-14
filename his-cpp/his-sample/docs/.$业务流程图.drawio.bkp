@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="获取执行记录流程（条件+分页）" id="query-flow">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 泳道 -->
+        <mxCell id="lane-front" value="前端页面" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-api" value="API 层（Controller）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="1320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-service" value="业务层（Service）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="1320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-db" value="数据层（DAO / 数据库）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="680" width="1320" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- 节点 -->
+        <mxCell id="q1" value="用户选择单据类型&lt;br&gt;（处方 / 收费小票 / 挂号小票 / 处置单&lt;br&gt;　瓶签 / 日结单 / 检查申请单 / 检验申请单）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="60" y="60" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="q2" value="根据所选单据类型&lt;br&gt;前端动态加载对应的查询条件表单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="380" y="60" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="q3" value="用户填写查询条件 + 点击【查询】&lt;br&gt;（日期范围必填，其他条件可选）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="680" y="60" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="q4" value="发送 GET 请求到后端&lt;br&gt;携带查询条件 + 分页参数" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="990" y="60" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="q5" value="参数校验" style="rhombus;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=11;" vertex="1" parent="lane-api">
+          <mxGeometry x="1010" y="55" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q5e" value="校验失败→返回错误提示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faad14;strokeColor=#d4880f;fontSize=11;" vertex="1" parent="lane-api">
+          <mxGeometry x="830" y="60" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="q6" value="根据单据类型路由到对应的 Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="1010" y="60" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q7" value="Service 构建查询条件&lt;br&gt;拼接 WHERE 子句 + 排序 + 分页参数" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="730" y="60" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="q8" value="调用 DAO 执行查询&lt;br&gt;先查总记录数，再查分页数据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="470" y="60" width="220" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="q9" value="数据库执行查询&lt;br&gt;COUNT 查总数 + SELECT 分页查数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#f44336;strokeColor=#b71c1c;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-db">
+          <mxGeometry x="470" y="55" width="220" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="q10" value="封装返回分页结果&lt;br&gt;（数据列表 + 总条数 + 当前页 + 每页条数）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="200" y="60" width="230" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="q11" value="前端渲染列表 + 分页组件&lt;br&gt;每行带操作按钮：[查看详情] [打印] [补打]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="200" y="60" width="270" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- 连线 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="1" source="q1" target="q2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="1" source="q2" target="q3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="1" source="q3" target="q4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#006EAF;strokeWidth=2;" edge="1" parent="1" source="q4" target="q5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#2e7d32;" edge="1" parent="1" source="q5" target="q6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5f" value="不通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#d4880f;strokeWidth=2;fontColor=#d4880f;" edge="1" parent="1" source="q5" target="q5e"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="q6" target="q7"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="q7" target="q8"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="q8" target="q9"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#b71c1c;strokeWidth=2;" edge="1" parent="1" source="q9" target="q10"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="q10" target="q11"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- 数据来源表参考 -->
+        <mxCell id="ref" value="&lt;b&gt;8 种单据数据来源表：&lt;/b&gt;&lt;br&gt;挂号小票 → t_registration&lt;br&gt;门诊处方 → t_prescription&lt;br&gt;检查申请单 → t_exam_request&lt;br&gt;检验申请单 → t_lab_request&lt;br&gt;门诊处置单 → t_treatment_order&lt;br&gt;输液瓶签 → t_infusion_label&lt;br&gt;收费小票 → t_fee_receipt&lt;br&gt;费用日结单 → t_daily_settlement" style="text;html=1;strokeColor=#666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="60" y="880" width="320" height="155" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="打印执行记录流程" id="print-flow">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 泳道 -->
+        <mxCell id="lane-front" value="前端页面（浏览器）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-api" value="API 层（Controller）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="1320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-service" value="业务层（Service）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="1320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-db" value="数据层（DAO / 数据库）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="680" width="1320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-plugin" value="本地打印插件（OpenHIS）" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fillColor=#e8d5f5;strokeColor=#9673a6;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="860" width="1320" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- 节点：前端 -->
+        <mxCell id="p1" value="触发打印&lt;br&gt;├─ 业务发生时自动触发（如挂号→打印挂号小票）&lt;br&gt;├─ 查询列表页点击【打印】按钮&lt;br&gt;└─ 查询列表页点击【补打】按钮" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#7d3c98;fontColor=#fff;fontSize=10;align=left;" vertex="1" parent="lane-front">
+          <mxGeometry x="60" y="40" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="是否为补打？&lt;br&gt;（查询打印日志判断是否已打印过）" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d7bde2;strokeColor=#7d3c98;fontSize=10;" vertex="1" parent="lane-front">
+          <mxGeometry x="440" y="55" width="180" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="首次打印&lt;br&gt;弹窗确认打印内容" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#7d3c98;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="680" y="45" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="补打&lt;br&gt;弹窗提示「已打印过，是否补打？」" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="680" y="120" width="210" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="发送 POST 请求到后端&lt;br&gt;携带：单据类型 + 单据ID + 是否补打标记" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#7d3c98;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-front">
+          <mxGeometry x="950" y="50" width="260" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- 节点：API -->
+        <mxCell id="p6" value="校验请求&lt;br&gt;单据是否存在？有打印权限？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=11;" vertex="1" parent="lane-api">
+          <mxGeometry x="970" y="50" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6e" value="校验失败→返回错误" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faad14;strokeColor=#d4880f;fontSize=11;" vertex="1" parent="lane-api">
+          <mxGeometry x="750" y="55" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- 节点：业务层 -->
+        <mxCell id="p7" value="路由到对应打印模板&lt;br&gt;├─ 小票类（挂号/收费）→ 热敏小票模板&lt;br&gt;├─ 处方类 → A5 模板&lt;br&gt;├─ 申请单类（检查/检验）→ A4 模板&lt;br&gt;├─ 处置单类 → A5 模板&lt;br&gt;├─ 瓶签类 → 标签模板&lt;br&gt;└─ 日结单类 → A4 汇总模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=10;align=left;" vertex="1" parent="lane-service">
+          <mxGeometry x="970" y="45" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p8" value="查询单据完整数据&lt;br&gt;关联查询患者信息、科室等" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="730" y="55" width="210" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p9" value="数据填充模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="500" y="55" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p10" value="是否补打？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5b7b1;strokeColor=#c0392b;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="520" y="145" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p11" value="添加「补打」水印&lt;br&gt;累加打印次数" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="660" y="145" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p12" value="调用打印插件生成打印数据&lt;br&gt;通过 localhost 与本地 OpenHIS 插件通信" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-service">
+          <mxGeometry x="250" y="55" width="230" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 节点：数据层 -->
+        <mxCell id="p13" value="数据库查询单据数据&lt;br&gt;关联患者表、科室表等" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#f44336;strokeColor=#b71c1c;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-db">
+          <mxGeometry x="730" y="50" width="210" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="p14" value="写入打印日志&lt;br&gt;（打印时间、打印人、单据类型、&lt;br&gt;　是否补打、打印次数）" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#f44336;strokeColor=#b71c1c;fontColor=#fff;fontSize=10;align=left;" vertex="1" parent="lane-db">
+          <mxGeometry x="250" y="45" width="230" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 节点：打印插件 -->
+        <mxCell id="p15" value="OpenHIS 本地打印插件接收请求&lt;br&gt;根据模板类型和数据进行渲染" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673a6;strokeColor=#6b3a7d;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-plugin">
+          <mxGeometry x="250" y="45" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p16" value="发送打印指令到物理打印机&lt;br&gt;（支持静默打印，不弹系统对话框）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673a6;strokeColor=#6b3a7d;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-plugin">
+          <mxGeometry x="580" y="45" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p17" value="返回打印结果&lt;br&gt;（成功 / 失败 + 打印机信息）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673a6;strokeColor=#6b3a7d;fontColor=#fff;fontSize=11;" vertex="1" parent="lane-plugin">
+          <mxGeometry x="900" y="45" width="210" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 连线 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#7d3c98;strokeWidth=2;" edge="1" parent="1" source="p1" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#7d3c98;strokeWidth=2;fontColor=#7d3c98;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#c0392b;strokeWidth=2;fontColor=#c0392b;" edge="1" parent="1" source="p2" target="p4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#7d3c98;strokeWidth=2;" edge="1" parent="1" source="p3" target="p5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#c0392b;strokeWidth=2;" edge="1" parent="1" source="p4" target="p5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#7d3c98;strokeWidth=2;" edge="1" parent="1" source="p5" target="p6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#2e7d32;" edge="1" parent="1" source="p6" target="p7"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7f" value="不通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#d4880f;strokeWidth=2;fontColor=#d4880f;" edge="1" parent="1" source="p6" target="p6e"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="p7" target="p8"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="p8" target="p13"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#b71c1c;strokeWidth=2;" edge="1" parent="1" source="p13" target="p9"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="p9" target="p10"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e12" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#c0392b;strokeWidth=2;fontColor=#c0392b;" edge="1" parent="1" source="p10" target="p11"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#7d3c98;strokeWidth=2;fontColor=#7d3c98;" edge="1" parent="1" source="p10" target="p12"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#c0392b;strokeWidth=2;" edge="1" parent="1" source="p11" target="p12"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e15" value="通过 localhost 通信" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#9673a6;strokeWidth=2;fontColor=#9673a6;" edge="1" parent="1" source="p12" target="p15"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1" source="p15" target="p16"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1" source="p16" target="p17"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e18" value="异步记录" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;strokeColor=#b71c1c;strokeWidth=2;dashed=1;fontColor=#b71c1c;" edge="1" parent="1" source="p12" target="p14"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- 图例 -->
+        <mxCell id="lg1" value="图例：" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1040" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="lg2" value="前端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#7d3c98;fontColor=#fff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="110" y="1042" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lg3" value="Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4caf50;strokeColor=#2e7d32;fontColor=#fff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1042" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lg4" value="数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=5;fillColor=#f44336;strokeColor=#b71c1c;fontColor=#fff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1038" width="60" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="lg5" value="打印插件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673a6;strokeColor=#6b3a7d;fontColor=#fff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="1042" width="70" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lg6" value="补打分支" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#fff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1042" width="70" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lg7" value="判断" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d7bde2;strokeColor=#7d3c98;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1038" width="45" height="28" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,42 @@
+#pragma once
+#ifndef _CLNALLERGYINTOLERANCEDO_H_
+#define _CLNALLERGYINTOLERANCEDO_H_
+#include "../DoInclude.h"
+
+class ClnAllergyIntoleranceDO : public BaseDO
+{
+public:
+    MYSQL_SYNTHESIZE(string, id, Id);
+    MYSQL_SYNTHESIZE(string, tenant_id, TenantId);
+    MYSQL_SYNTHESIZE(string, patient_id, PatientId);
+    MYSQL_SYNTHESIZE(string, allergy_text, AllergyText);
+
+    MYSQL_SYNTHESIZE(string, created_by, CreatedBy);
+    MYSQL_SYNTHESIZE(int64_t, created_at, CreatedAt);
+    MYSQL_SYNTHESIZE(string, updated_by, UpdatedBy);
+    MYSQL_SYNTHESIZE(int64_t, updated_at, UpdatedAt);
+    MYSQL_SYNTHESIZE(bool, is_deleted, IsDeleted);
+    MYSQL_SYNTHESIZE(int64_t, deleted_at, DeletedAt);
+    MYSQL_SYNTHESIZE(string, deleted_by, DeletedBy);
+    MYSQL_SYNTHESIZE(int, version, Version);
+
+public:
+    ClnAllergyIntoleranceDO() : BaseDO("cln_allergy_intolerance")
+    {
+        MYSQL_ADD_FIELD_PK("id", "s", id);
+        MYSQL_ADD_FIELD_NULLABLE("tenant_id", "s", tenant_id, false);
+        MYSQL_ADD_FIELD_NULLABLE("patient_id", "s", patient_id, false);
+        MYSQL_ADD_FIELD_NULLABLE("allergy_text", "s", allergy_text, true);
+
+        MYSQL_ADD_FIELD_NULLABLE("created_by", "s", created_by, true);
+        MYSQL_ADD_FIELD_NULLABLE("created_at", "ll", created_at, true);
+        MYSQL_ADD_FIELD_NULLABLE("updated_by", "s", updated_by, true);
+        MYSQL_ADD_FIELD_NULLABLE("updated_at", "ll", updated_at, true);
+        MYSQL_ADD_FIELD_NULLABLE("is_deleted", "b", is_deleted, false);
+        MYSQL_ADD_FIELD_NULLABLE("deleted_at", "ll", deleted_at, true);
+        MYSQL_ADD_FIELD_NULLABLE("deleted_by", "s", deleted_by, true);
+        MYSQL_ADD_FIELD_NULLABLE("version", "i", version, false);
+    }
+};
+typedef std::shared_ptr<ClnAllergyIntoleranceDO> PtrClnAllergyIntoleranceDO;
+#endif

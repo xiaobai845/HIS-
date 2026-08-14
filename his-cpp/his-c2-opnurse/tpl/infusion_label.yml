@@ -1,0 +1,37 @@
+# 输液瓶签打印模板
+maxrow: 20
+rowheight: 22
+colwidth: 180
+titlefontsize: 14
+contentfontsize: 11
+top: 20
+left: 30
+title: 输液瓶签
+fields:
+  - patientName:
+     title: 患者姓名
+     prop: patientName
+  - bedNo:
+     title: 床号
+     prop: bedNo
+  - admissionNo:
+     title: 住院号
+     prop: admissionNo
+  - drugName:
+     title: 药品名称
+     prop: drugName
+  - dosage:
+     title: 剂量
+     prop: dosage
+  - usage:
+     title: 用法
+     prop: usage
+  - frequency:
+     title: 频次
+     prop: frequency
+  - dripRate:
+     title: 滴速
+     prop: dripRate
+  - remark:
+     title: 备注
+     prop: remark

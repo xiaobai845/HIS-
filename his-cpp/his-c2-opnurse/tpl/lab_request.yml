@@ -1,0 +1,36 @@
+# 检验申请单打印模板
+maxrow: 20
+rowheight: 22
+colwidth: 180
+titlefontsize: 18
+contentfontsize: 11
+top: 30
+left: 40
+title: 检验申请单
+fields:
+  - patientName:
+     title: 患者姓名
+     prop: patientName
+  - applyDept:
+     title: 申请科室
+     prop: applyDept
+  - labItem:
+     title: 检验项目
+     prop: labItem
+     colwidth: 250
+  - specimenType:
+     title: 标本类型
+     prop: specimenType
+  - sampleTime:
+     title: 采样时间
+     prop: sampleTime
+  - doctorName:
+     title: 申请医生
+     prop: doctorName
+  - diagnosis:
+     title: 临床诊断
+     prop: diagnosis
+     colwidth: 300
+  - remark:
+     title: 备注
+     prop: remark

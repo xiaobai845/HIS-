@@ -1,0 +1,36 @@
+# 处置单打印模板
+maxrow: 20
+rowheight: 22
+colwidth: 180
+titlefontsize: 18
+contentfontsize: 11
+top: 30
+left: 40
+title: 门诊处置单
+fields:
+  - patientName:
+     title: 患者姓名
+     prop: patientName
+     colwidth: 150
+  - treatmentItem:
+     title: 处置项目
+     prop: treatmentItem
+     colwidth: 300
+  - execDept:
+     title: 执行科室
+     prop: execDept
+  - doctorName:
+     title: 医生
+     prop: doctorName
+  - orderTime:
+     title: 医嘱时间
+     prop: orderTime
+  - execTime:
+     title: 执行时间
+     prop: execTime
+  - executor:
+     title: 执行人
+     prop: executor
+  - remark:
+     title: 备注
+     prop: remark

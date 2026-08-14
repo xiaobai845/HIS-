@@ -1,0 +1,36 @@
+# 检查申请单打印模板
+maxrow: 20
+rowheight: 22
+colwidth: 180
+titlefontsize: 18
+contentfontsize: 11
+top: 30
+left: 40
+title: 检查申请单
+fields:
+  - patientName:
+     title: 患者姓名
+     prop: patientName
+  - applyDept:
+     title: 申请科室
+     prop: applyDept
+  - examItem:
+     title: 检查项目
+     prop: examItem
+     colwidth: 250
+  - examBodyPart:
+     title: 检查部位
+     prop: examBodyPart
+  - examMethod:
+     title: 检查方法
+     prop: examMethod
+  - doctorName:
+     title: 申请医生
+     prop: doctorName
+  - diagnosis:
+     title: 临床诊断
+     prop: diagnosis
+     colwidth: 300
+  - remark:
+     title: 备注
+     prop: remark

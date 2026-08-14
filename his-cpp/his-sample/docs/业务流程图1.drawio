@@ -1,0 +1,236 @@
+<mxfile host="Electron" pages="2">
+  <diagram id="80om5WcLFdIq8TszczmJ" name="打印">
+    <mxGraphModel dx="816" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EqHAif0u22M-ILxELRep-3" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="EqHAif0u22M-ILxELRep-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-6" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-7" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span style=&quot;font-size: 11px; color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;触发打印&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="220" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-9" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span style=&quot;font-size: 11px; color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;自动触发&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="220" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-10" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;点击补打&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="310" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-11" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span style=&quot;font-size: 11px; color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;点击打印&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="130" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-15" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-18" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d7bde2;strokeColor=#7d3c98;fontSize=10;" value="是否为补打？&lt;br&gt;（查询打印日志判断是否已打印过）" vertex="1">
+          <mxGeometry height="85" width="180" x="165" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-19" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;首次打印&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="100" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-22" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;弹窗确认打印内容&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="70" x="100" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-20" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;补打&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="320" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-23" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;弹窗提示&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;已打印过&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;是否补打？&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="90" x="310" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-25" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;发送 POST 请求到后端&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="180" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-32" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-33" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-24" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d7bde2;strokeColor=#7d3c98;fontSize=10;" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;校验请求&lt;/span&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;单据是否存在？有打印权限？&lt;/span&gt;" vertex="1">
+          <mxGeometry height="85" width="180" x="165" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-43" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-44" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;调用对应数据填充模板&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="220" y="821" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-39" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;数据库查询单据数据&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;关联患者表、科室表等&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="180" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-38" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 10px; text-align: left;&quot;&gt;路由到对应打印模板&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="220" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;检验失败，返回&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="390" y="532.5" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-40" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-41" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-34" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d7bde2;strokeColor=#7d3c98;fontSize=10;" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;是否补打？&lt;/span&gt;" vertex="1">
+          <mxGeometry height="45" width="100" x="205" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-42" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;添加补打水印&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="334" y="762.5" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;写入打印日志&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="320" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-48" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;调用打印插件生成打印数据&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;通过 localhost 与本地 OpenHIS 插件通信&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="80" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-49" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;OpenHIS 本地打印插件接收请求&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;根据模板类型和数据进行渲染&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="70" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-50" edge="1" parent="1" source="EqHAif0u22M-ILxELRep-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EqHAif0u22M-ILxELRep-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;发送打印指令到物理打印机&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;（支持静默打印，不弹系统对话框）&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="70" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="EqHAif0u22M-ILxELRep-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;返回打印结果&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;（成功 / 失败 + 打印机信息）&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="70" y="1100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="wZI-XxADy-2grpw6aXXF" name="获取执行记录">
+    <mxGraphModel dx="816" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-1" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="bmpDqhWPg_SBfGYWYMkh-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span style=&quot;font-size: 11px; color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;选择单据类型&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="70" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-23" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;span style=&quot;font-size: 11px; color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;前端根据类型动态加载查询条件表单&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="90" x="270" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-27" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-28" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-11" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d7bde2;strokeColor=#7d3c98;fontSize=10;" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;参数校验&lt;/span&gt;" vertex="1">
+          <mxGeometry height="45" width="100" x="270" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-24" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;用户填写查询条件&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="265" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-25" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;点击查询&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="270" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-26" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;发送 GET 请求到后端&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;携带查询条件 + 分页参数&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="250" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;校验失败&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;返回错误提示&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="90" x="400" y="327.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-29" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;根据单据类型路由到对应的 Service&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="255" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-35" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;Service 构建查询条件&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;拼接 WHERE 子句 + 排序 + 分页参数&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="255" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-32" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;调用 DAO 执行查询&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;先查总记录数，再查分页数据&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="255" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;前端渲染列表 + 分页组件&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="255" y="754" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-33" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;数据库执行查询&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;COUNT 查总数 + SELECT 分页查数据&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="255" y="614" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-34" edge="1" parent="1" source="bmpDqhWPg_SBfGYWYMkh-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="bmpDqhWPg_SBfGYWYMkh-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bmpDqhWPg_SBfGYWYMkh-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;封装返回分页结果&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 11px;&quot;&gt;（数据列表 + 总条数 + 当前页 + 每页条数）&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="255" y="684" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

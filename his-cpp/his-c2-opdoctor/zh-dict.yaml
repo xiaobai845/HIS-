@@ -1,0 +1,563 @@
+title:
+ tags:
+  text: "周期循环"
+chinapres1:
+ field:
+  patientid: "病历号"
+  presid: "处方号"
+  keyword: "搜索组套/历史处方"
+  id: "处方ID"
+  name: "处方名称"
+  herbs: "药材摘要"
+  prescno: "处方号"
+  status: "处方状态"
+  usage: "用法"
+  frequency: "频次"
+  days: "天数"
+  doses: "付数"
+  decoct: "代煎"
+  diagnosis: "诊断"
+  remark: "备注"
+  totalcount: "总味数"
+  doseamount: "单剂金额"
+  totalamount: "合计金额"
+  details: "药材明细"
+  herbname: "药材名称"
+  dosage: "剂量"
+  unitprice: "单价"
+  subtotal: "小计"
+  prescriptionno: "处方号"
+  count: "味数"
+  prescriptionid: "处方记录ID"
+  encounterid: "就诊ID"
+  statusname: "处方状态名称"
+  copies: "付数"
+  decoction: "代煎"
+  version: "版本号"
+  createdat: "创建时间"
+  statuschangedat: "状态变更时间"
+  medicineid: "药品定义ID"
+  medicinecode: "药材编码"
+  quantity: "数量"
+  unit: "单位"
+  dose: "单剂用量"
+  doseunit: "剂量单位"
+  sortnumber: "排序号"
+  records: "历史处方列表"
+ tags:
+  tag: "中医处方"
+ query:
+  summary: "查询历史处方"
+ detail:
+  summary: "获取本次就诊中医处方详情"
+
+queue:
+ dto:
+  patientName: "姓名"
+  gender: "性别"
+  age: "年龄"
+  registerType: "挂号类型"
+  visitTime: "就诊时间"
+  visitNum: "病历号"
+  payType: "支付类型(自费/医保)"
+  visitStatus: "就诊状态"
+  encounterId: "就诊ID"
+  patientId: "患者ID"
+  queueNum: "排队号"
+  departmentName: "科室名称"
+  priorityName: "优先级名称"
+ query:
+  date: "日期"
+  patient: "患者"
+  visitStatus: "就诊状态"
+ param:
+  patientName: "姓名"
+  startDate: "就诊时间"
+  Status: "待诊/在诊/完诊"
+  finishStatus: "完成状态"
+
+rece:
+ dto:
+  name: "姓名"
+  visitStatus: "在诊状态"
+  gender: "性别"
+  age: "年龄"
+  registerType: "挂号类型"
+  medicalRecordNum: "病历号"
+  recordType: "病历类型"
+  time: "就诊时间"
+  registerDept: "挂号科室"
+  phoneNum: "电话号码"
+  allergyHistory: "过敏史"
+  encounterId: "就诊号"
+  patientId: "患者ID"
+  attendingDoctorName: "接诊医生姓名"
+  chiefComplaint: "主诉"
+  emergencyContact: "紧急联系人"
+  triageRemark: "分诊备注"
+ query:
+  data: "日期"
+ param:
+  name: "姓名"
+  gender: "性别"
+  age: "年龄"
+  registerType: "挂号类型"
+  visitTime: "就诊时间"
+  visitNum: "就诊号"
+  payType: "支付类型"
+  visitStatus: "就诊状态"
+ get:
+  summary: "获取接诊患者"
+
+finish:
+ dto:
+  newVisitStatus: "就诊状态"
+  encounterId: "就诊ID"
+  visitNo: "病历号"
+  version: "版本号"
+  arrived: "待诊"
+  inProgress: "在诊"
+  finished: "完诊"
+  completedAt: "完诊时间"
+ query:
+  visitStatus: "其他状态"
+ get:
+  summary: "完诊"
+
+leave:
+ dto:
+  newVisitStatus: "暂离状态"
+  encounterId: "就诊ID"
+  version: "版本号"
+  arrived: "待诊"
+  inProgress: "在诊"
+  finished: "完诊"
+  attendingDoctorName: "接诊医生名字"
+  acceptedAt: "接诊时间"
+ query:
+  visitStatus: "其他状态"
+ get:
+  summary: "暂离"
+
+cyclectrl2:
+ test:
+  tag: "周期循环"
+ refund:
+  tag: "退费"
+  apply: "申请退费"
+  query: "查询退费清单"
+ patient:
+  patientNo: "病历号"
+  patientName: "姓名"
+  age: "年龄"
+  gender: "性别"
+  department: "科室"
+  patientId: "门诊号"
+  phone: "联系电话"
+  idNumber: "证件号"
+  registrationType: "挂号类型"
+  visitStatus: "就诊状态"
+  admissionTime: "接诊时间"
+  doctor: "接诊医师"
+  apply: "勾选项"
+  applyNo: "勾选数量"
+  applySum: "合计费用"
+  paymentNo: "支付单号"
+  itemName: "收费项目名称"
+  quantity: "数量"
+  amount: "金额"
+  chargeStatus: "收费状态"
+  refundStatus: "退费状态"
+ prescription:
+  tag: "处方单"
+  query: "查询处方单"
+  prescriptionNo: "处方号"
+  costType: "费用类型"
+  date: "日期"
+  doctor: "开单医生"
+  diagnosis: "诊断"
+  totalPrice: "总金额"
+  pharmacist: "调配人"
+  dispenser: "发药人"
+  priceChecker: "划价人"
+  items: "Rp"
+ admission:
+  tag: "办理入院"
+  apply: "办理入院"
+  admissionDepartment: "入院科室"
+  admissionWard: "入院病区"
+  diagnosisType: "诊断类型"
+  admissionDiagnosis: "入院主诊断"
+  diagnosisDesc: "诊断描述"
+  admissionType: "入院类型"
+  admissionMethod: "入院方式"
+  priority: "病情优先级"
+
+diagnose:
+ add:
+  summary: "新增诊断"
+  id: "诊断主键ID"
+  encounterId: "就诊ID"
+  conditionId: "病情ID"
+  description: "诊断描述"
+  diagTypeCode: "诊断类型编码"
+  diagCode: "诊断编码"
+  rank: "排序"
+  isPrimaryFlag: "是否主诊断"
+  highestDiagFlag: "是否最高诊断"
+  tcmFlag: "是否中医诊断"
+  tcmGroupName: "中医诊断分组"
+  medType: "医保类型"
+  conditionCode: "病情编码"
+  createdAt: "创建时间"
+ delete:
+  summary: "删除诊断"
+  id: "诊断主键ID"
+  encounterId: "就诊ID"
+  conditionId: "病情ID"
+  description: "诊断描述"
+  deletedAt: "删除时间"
+  deletedBy: "删除人"
+ usage:
+  summary: "获取诊断历史"
+  id: "诊断主键ID"
+  encounterId: "就诊ID"
+  conditionId: "病情ID"
+  description: "诊断描述"
+  diagTypeCode: "诊断类型编码"
+  diagCode: "诊断编码"
+  rank: "排序"
+  isPrimaryFlag: "是否主诊断"
+  highestDiagFlag: "是否最高诊断"
+  tcmFlag: "是否中医诊断"
+  tcmGroupName: "中医诊断分组"
+  medType: "医保类型"
+  conditionCode: "病情编码"
+  createdAt: "诊断时间"
+  keyword: "关键字"
+  startDate: "开始时间"
+  endDate: "结束时间"
+ patient:
+  summary: "获取患者诊断记录(分页)"
+  pageIndex: "页码"
+  pageSize: "每页条数"
+  patientId: "患者ID"
+  keyword: "关键字"
+  diagTypeCode: "诊断类型编码"
+  startDate: "开始时间"
+  endDate: "结束时间"
+ tag: "诊断管理"
+
+prescription3:
+ tags:
+  tag: "开立医嘱"
+ batchDelete:
+  summary: "删除多条未签发医嘱"
+ mergeGroup:
+  summary: "合并多条未签发医嘱为一组"
+ splitGroup:
+  summary: "拆分一组已合并医嘱"
+ field:
+  deletePrescriptionIds: "待删除医嘱ID集合，只允许未签发医嘱"
+  mergePrescriptionIds: "待合并医嘱ID集合，至少两条未签发医嘱"
+  splitPrescriptionIds: "待拆分医嘱ID集合，只能传合并组内医嘱"
+
+historyOrder:
+ tags:
+  tag: "开立医嘱"
+ list:
+  summary: "分页查询历史就诊记录"
+ detail:
+  summary: "分页查询历史医嘱明细"
+ field:
+  patientId: "患者ID"
+  visitId: "就诊ID"
+  visitTime: "就诊时间"
+  visitType: "就诊类型"
+  mainDiagnosis: "主诊断"
+  doctorName: "医生姓名"
+  drugCount: "药品数量"
+  examCount: "检查项目数量"
+  materialCount: "耗材数量"
+  orderId: "医嘱ID"
+  orderType: "医嘱类型"
+  orderName: "医嘱名称"
+  quantity: "开立数量"
+  executeCount: "执行次数"
+  sampleType: "标本类型"
+  executeHospital: "执行医院"
+  createTime: "开立时间"
+  diagnosis: "诊断"
+  isSkinTest: "是否皮试"
+
+test:
+ get:
+  summary: "测试查询接口"
+  result: "这是测试接口，返回测试数据"
+
+common:
+ keyword: "关键字"
+
+order:
+ tags:
+  tag: "开立医嘱"
+ query:
+  summary: "分页查询医嘱"
+ add:
+  summary: "新增医嘱"
+ modify:
+  summary: "修改医嘱"
+ batchAdd:
+  summary: "批量新增医嘱"
+ catalog:
+  summary: "分页查询项目字典"
+ field:
+  # === 上下文 ===
+  encounterId: "就诊ID"
+  patientId: "患者ID"
+  catalogId: "项目目录ID"
+  orderType: "医嘱类型"
+  expenseType: "费用类型"
+
+  # === 查询筛选 ===
+  keyword: "关键字"
+  status: "状态"
+
+  # === 项目信息 ===
+  itemCode: "项目编码"
+  itemName: "项目名称"
+  category: "项目类别"
+  categoryCode: "类别编码"
+  categoryName: "类别名称"
+  spec: "规格"
+  unitPrice: "单价"
+
+  # === 临床用法 ===
+  dosage: "用量"
+  dose: "单次剂量"
+  doseUnit: "剂量单位"
+  frequency: "频次"
+  routeCode: "给药途径编码"
+  useDays: "使用天数"
+  quantity: "数量"
+  quantityUnit: "数量单位"
+  contentPerUnit: "每单位含量"
+  isSkinTest: "是否皮试"
+  remark: "备注"
+
+  # === 分组排序 ===
+  groupId: "组套ID"
+  orderNo: "排序号"
+  version: "版本号"
+
+  # === 医嘱标识 ===
+  orderId: "医嘱ID"
+  prescriptionNo: "处方号"
+
+  # === 医生信息 ===
+  doctorId: "医生ID"
+  doctorName: "医生姓名"
+
+  # === 状态时间 ===
+  createTime: "开立时间"
+  updatedAt: "更新时间"
+  totalPrice: "合计金额"
+
+  # === 展示字段 ===
+  routeDisplay: "给药途径展示"
+  frequencyDisplay: "频次展示"
+  statusDisplay: "状态展示"
+  orderTypeDisplay: "医嘱类型展示"
+
+  # === 批量入参 ===
+  orderList: "医嘱列表"
+
+audit:
+ orderId: "医嘱ID"
+ orderType: "医嘱类型"
+ operateType: "操作类型"
+ operatorId: "操作人ID"
+ operatorName: "操作人姓名"
+ operateTime: "操作时间"
+ beforeData: "变更前数据"
+ afterData: "变更后数据"
+ changedFields: "变更字段集合"
+ remark: "备注"
+
+medical-advice:
+ tags:
+  tag: "开立医嘱"
+ sign:
+  summary: "批量签署医嘱"
+ withdraw:
+  summary: "批量撤回医嘱"
+ print-application-form:
+  summary: "打印申请单"
+ field:
+  medical-advice-ids: "医嘱ID列表"
+  service-request-id: "服务申请单ID"
+  encounter-id: "就诊ID"
+  version: "版本号"
+  advice-ids: "医嘱ID列表"
+
+createOrder:
+ test:
+  get:
+   summary: "查询测试接口"
+   result: "这个是测试接口，返回测试数据"
+ common:
+  keyword: "关键词"
+ order:
+  tags:
+   tag: "开立医嘱"
+  field:
+   patientid1: "患者病历号"
+   encounterid: "本次就诊号"
+   recordid: "病历ID"
+   keyword: "搜索关键词"
+   status1: "状态"
+   statusname: "状态名称"
+   updatetime: "更新时间"
+   data: "分页数据"
+   visitid: "就诊ID"
+   patientid: "患者ID"
+   departmentId: "科室ID"
+   excludeCodes: "排除编码"
+   strictStock: "严格库存检查"
+   itemCode: "项目编码"
+   itemName: "项目名称"
+   category: "类别"
+   spec: "规格"
+   stock: "库存"
+   unitPrice: "单价"
+   diagnosis: "诊断"
+   expenseType: "费用性质"
+   dosage: "用量"
+   frequency: "频次"
+   routeCode: "给药途径"
+   useDays: "使用天数"
+   quantity: "数量"
+   isSkinTest: "是否皮试"
+   remark: "备注"
+   orderid: "医嘱ID"
+   doctorId: "医生ID"
+   doctorName: "医生姓名"
+   status: "状态"
+   createTime: "开立时间"
+   totalPrice: "总价"
+   orderId: "医嘱 ID，长度 1‑64"
+   deleteOrders: "待删除医嘱；选择组内成员会自动扩展为整个组，最多传 200 项"
+   mergeOrders: "待并组医嘱；至少包含两个独立医嘱或已有组，最多传 200 项"
+   splitOrders: "待拆组医嘱；可传组内任意成员，后端按完整组拆分，最多传 200 项"
+   success: "操作是否成功"
+   affectedCount: "实际受影响的医嘱条数"
+   groupId: "后端生成的雪花分组 ID"
+   message: "操作结果说明"
+   version: "当前医嘱列表整体版本，非负整数；取最近一次查询或操作响应中的 version"
+   deleteAdviceIds: "待删除医嘱 ID；选择组内成员会自动扩展为整个组，最多传 200 项"
+   mergeAdviceIds: "待并组医嘱 ID；至少包含两个独立医嘱或已有组，最多传 200 项"
+   splitAdviceIds: "待拆组医嘱 ID；可传组内任意成员，后端按完整组拆分，最多传 200 项"
+   adviceId: "医嘱 ID，长度 1‑64"
+   orderType: "医嘱类型：MEDICATION（药品）、SERVICE（服务）、DEVICE（器材）"
+   affectedOrders: "操作实际影响的医嘱及操作后的分组结果"
+   resultVersion: "操作完成后的最新医嘱列表整体版本"
+   updatedAt: "医嘱列表版本更新时间，格式：YYYY‑MM‑DD HH:mm:ss.SSSSSS"
+   resultGroupId: "操作后的分组 ID；拆组后为空字符串"
+  query:
+   summary: "分页查询医嘱"
+  add:
+   summary: "新增医嘱"
+  modify:
+   summary: "修改医嘱"
+  catalog:
+   summary: "分页查询项目"
+  batchDelete:
+   summary: "删除待签发医嘱"
+   description: "软删除 DRAFT 医嘱；选中组内任意医嘱时删除整个组。仅允许 IN_PROGRESS 就诊，version 为当前医嘱列表整体版本。支持药品、服务和器材医嘱。业务码：21001 参数错误、21002 记录不存在、21003 状态错误、21004 分组错误、21005 范围不一致、21006 版本冲突、21007 数据库错误。"
+  mergeGroup:
+   summary: "合并待签发医嘱组"
+   description: "将至少两个独立医嘱或已有医嘱组合并为新组。仅允许 IN_PROGRESS 就诊，version 为当前医嘱列表整体版本。允许跨医嘱类型，groupId 由后端生成。业务码：21001 参数错误、21002 记录不存在、21003 状态错误、21004 分组错误、21005 范围不一致、21006 版本冲突、21007 数据库错误。"
+  splitGroup:
+   summary: "拆分待签发医嘱组"
+   description: "选中组内任意医嘱后拆分整个组，全部成员恢复为独立医嘱，不恢复历史分组。仅允许 IN_PROGRESS 就诊，version 为当前医嘱列表整体版本。业务码：21001 参数错误、21002 记录不存在、21003 状态错误、21004 分组错误、21005 范围不一致、21006 版本冲突、21007 数据库错误。"
+
+ chinapres3:
+  tags:
+   tag: "中医处方"
+  issue:
+   summary: "签发处方"
+  recall:
+   summary: "撤回处方"
+  field:
+   prescriptionNo: "处方编号"
+   status: "处方状态"
+   createBy: "创建人"
+   updateBy: "更新人"
+   patientId: "患者ID"
+   diagnosisId: "诊断ID"
+   usage: "用法"
+   frequency: "频次"
+   days: "天数"
+   copies: "付数"
+   decoction: "是否代煎"
+   remark: "医嘱备注"
+   items: "添加药材"
+   medicineId: "药材ID"
+   dosage: "剂量(g)"
+   materialCode: "精确搜项目编码"
+   materialName: "模糊搜药材名称"
+   category: "类别筛选：中草药、耗材"
+   encounterId: "就诊ID"
+   statusEnum: "处方状态"
+   rxTypeCode: "处方类型"
+   busNo: "业务编号"
+   therapyEnum: "医嘱类型"
+   tcmFlag: "中医标识"
+   unitCode: "单位编码"
+   sortNumber: "排序号"
+   chineseHerbsDoseQuantity: "付数"
+   sufferingFlag: "是否代煎"
+   medicationRequestId: "药品行ID"
+   medReqId: "处方行ID"
+   locationId: "发药库位"
+   dispenseEnum: "发药类型"
+   serviceTable: "业务来源表"
+   serviceId: "业务来源ID"
+   definitionId: "收费项目定义ID"
+   totalPrice: "总价"
+   quantityValue: "数量值"
+   quantityUnit: "数量单位"
+   unitPrice: "单价"
+   accountId: "账户ID"
+   orgId: "开立机构"
+   conditionId: "诊断ID"
+   encounterDiagnosisId: "就诊诊断ID"
+   generateSourceEnum: "生成来源"
+   contextEnum: "收费上下文"
+   signTargets: "签发目标列表"
+   prescriptionGroupKey: "处方组标识"
+   processedCount: "处理的药品行数"
+   prescriptionCount: "涉及的处方数量"
+   busNos: "发药业务流水号（签发时生成，格式\"BUS\"+雪花ID，下游药房系统凭此查询发药状态）"
+   prescriptionNos: "处方号列表"
+   issuedAt: "签发时间"
+   revokedPrescriptionCount: "撤回处方数"
+   revokedMedicationCount: "撤回药品行数"
+   revokedPrescriptionNos: "撤回的处方号列表"
+   revokedAt: "撤回时间"
+   failures: "撤回失败项"
+   reason: "失败原因"
+   isDeleted: "逻辑删除标记"
+
+outpatientrecord3:
+ field:
+  outpatientrecord3Id: "病历ID（为空表示新增，不为空表示修改）"
+  encounterId: "就诊ID"
+  title: "病历标题"
+  templateId: "模板ID"
+  content: "病历正文"
+  updatedAt: "最后更新时间"
+ tags:
+  tag: "门诊病历"
+ save:
+  summary: "保存门诊病历"
